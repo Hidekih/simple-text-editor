@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button { cursor: pointer; }
+
+header {
+    background: #405;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+}
+
+#header-higher, #header-bottom {
+    display: flex;
+    align-items: center;
+}
+
+#header-higher {
+
+}
+
+#header-higher div{
+    display: flex;
+}
+
+#header-higher input{
+    display: flex;
+}
+
+#header-higher input, #header-higher select {
+    outline: none;
+}
+
+#header-bottom{
+    margin-top: 6px;
+}
+
+.input-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-select input,
+.input-select select {
+    height: 24px;
+}
+
+#font-family input {
+    width: 121px;
+}
+
+#font-family select {
+    width: 140px;
+}
+
+#font-family input {
+    margin-top: -24px;
+}
+
+#font-size input {
+    width: 51px;
+}
+
+#font-size select {
+    width: 70px;
+}
+
+#font-size input {
+    margin-top: -24px;
+}
+
+hr {
+    margin: 0 8px;
+    border-color: rgba(249, 249, 249, 0.6);
+    height: 14px;
+    width: 1px;
+    border-width: 0 1px 0 0;
+}
+
+#change-to-bold,
+#change-to-italic,
+#change-to-underline,
+#change-color {
+    width: 24px;
+    height: 24px;
+    font-family: Verdana, 'Times New Roman', sans-serif;
+    border-radius: 2px;
+    background: transparent;
+    border: none;
+    color:#f9f9f9;
+    font-size: 12px;
+    outline: none;
+}
+
+#change-to-bold:hover,
+#change-to-italic:hover,
+#change-to-underline:hover,
+#change-color:hover {
+    background: rgba(249, 249, 249, 0.1);
+}
+
+#change-to-bold {
+    font-weight: bold;
+}
+
+#change-to-italic {
+    font-style: italic;
+}
+
+#change-to-underline {
+    text-decoration: underline;
+}
+
+main{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 16px 0;
+    background: rgba(68, 0, 85, 0.1);
+}
+
+#text-field {
+    width: 720px;
+    min-height: 994px;
+    padding: 72px; 
+    outline: none;
+
+    background:#f9f9f9;
+    border: 1px solid #222;
+}
+
+footer {
+    padding: 12px 0;
+    background: #405;
+    color:#f9f9f9;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto';
+}
+
+@media (max-width: 720px) {
+    #text-field {
+        width: 100%;
+        padding: 36px; 
+    }
+}
