@@ -12,30 +12,25 @@
 <body>
     <div id="container">
         <header>
-            <!-- cima -->
-            <div id="header-higher">
-
+            <!-- top -->
+            <div id="header-top">
                 <div id="font-family" class="input-select">
                     <select onchange="onSelectChangeInput(this); changeFont('fontFamily', this.value, 'Arial')">
-                        <!-- <option value="Arial" selected="selected">Arial</option>
-                        <option value="Roboto">Roboto</option>
-                        <option value="Courier New">Courier New</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="asda">asda</option> -->
+                        <!-- automatic filling with js -->
                     </select>
                     <input type="text" onkeyup="selectOptionOnInput(this)">
                 </div>
 
                 <div id="font-size" class="input-select">
-                    <select onchange="onSelectChangeInput(this)">
-                        
+                    <select onchange="onSelectChangeInput(this); changeFont('fontSize', this.value, '11')">
+                        <!-- automatic filling with js -->
                     </select>
                     <input type="number" onkeyup="selectOptionOnInput(this)">
                 </div>
 
             </div>
 
-            <!-- baixo -->
+            <!-- bottom -->
             <div id="header-bottom">
                 <button id="change-to-bold" onclick="return changeFont('fontWeight', 'bold', 'normal');" >N</button>
                 <hr>
@@ -54,7 +49,7 @@
         </main>
 
         <footer>
-            Made with 💜 by Alexande Hideki Siroma
+            <p>Made with 💜 by Alexande Hideki Siroma</p>
         </footer>
 
         <script src="src/javascript/textFonts.js"></script>
