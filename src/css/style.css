@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+input, select, button {
+    outline: none;
+}
+
 button { cursor: pointer; }
 
 header {
@@ -20,24 +24,12 @@ header {
     align-items: center;
 }
 
-/* #header-top {
-
-} */
-
 #header-top div{
     display: flex;
 }
 
 #header-top input{
     display: flex;
-}
-
-#header-top input, #header-top select {
-    outline: none;
-}
-
-#header-bottom {
-    margin-left: 6px;
 }
 
 .input-select {
@@ -55,8 +47,8 @@ header {
 
 #font-family input,
 #font-size input{
-    padding: 0 6px;
     position: absolute;
+    padding: 0 6px;
 }
 
 #font-family input {
@@ -75,11 +67,15 @@ header {
     width: 80px;
 }
 
+#header-bottom {
+    margin-left: 6px;
+}
+
 hr {
-    margin: 0 8px;
-    border-color: rgba(249, 249, 249, 0.6);
-    height: 24px;
     width: 1px;
+    height: 24px;
+    margin: 0 8px;
+    border-color: rgba(249, 249, 249, 0.4);
     border-width: 0 1px 0 0;
 }
 
@@ -95,14 +91,15 @@ hr {
     border: none;
     color:#f9f9f9;
     font-size: 16px;
-    outline: none;
+    
+    transition: 0.4s;
 }
 
 #change-to-bold:hover,
 #change-to-italic:hover,
 #change-to-underline:hover,
 #change-color:hover {
-    background: rgba(249, 249, 249, 0.1);
+    color: #f9f9f9ab;
 }
 
 #change-to-bold {
@@ -115,6 +112,10 @@ hr {
 
 #change-to-underline {
     text-decoration: underline;
+}
+
+#change-color {
+    cursor: pointer;
 }
 
 main {
@@ -154,31 +155,9 @@ footer p {
         flex-direction: column;
     }
 
-    hr {
-        margin: 0 22px;
-    }
-
-    #header-top div + div {
-        /* margin-left: 22px; */
-    }
-
-    #header-bottom{
-        margin-top: 22px;
-    }
-
-    #header-bottom {
-        margin-left: 0;
-    }
-
     .input-select input,
     .input-select select {
         height: 32px;
-    }
-
-    #font-family input,
-    #font-size input{
-        padding: 0 6px;
-        position: absolute;
     }
 
     #font-family input {
@@ -195,6 +174,15 @@ footer p {
 
     #font-size select {
         width: 90px;
+    }
+
+    #header-bottom{
+        margin-top: 22px;
+        margin-left: 0;
+    }
+
+    hr {
+        margin: 0 22px;
     }
 
     #change-to-bold,
