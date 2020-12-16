@@ -1,15 +1,9 @@
-// function changeTextFieldStyle(property, value) {
-//     return textFieldEl.style[property] = value;
-// }
-
 function changeFont(property, value, resetStyle) {
     const selection = document.getSelection();
 
     const parsedValue = isNaN(Number(value))
         ? value
-        : value + "px";
-
-    // console.log(typeof parsedValue)
+        : value + "pt";
 
     if (selection.rangeCount) {
         const spanEl = document.createElement('span');
@@ -29,7 +23,7 @@ function changeFont(property, value, resetStyle) {
         spanEl.innerHTML = selection.toString();
 
         const range = selection.getRangeAt(0);
-        
+        console.log(spanEl.style.fontSize);
         range.deleteContents();
         range.insertNode(spanEl)
     }
@@ -44,8 +38,6 @@ function generateOptionsArray(selectOptionsData, arrayLength) {
     return array;
 }
 
-
-// TEMP functions -------------------------------------------------------
 function selectOptionOnInput(inputEl) {
     const parsedInputValue = String(inputEl.value).toLowerCase();
     const selectEl = inputEl.previousSibling.previousSibling;
@@ -60,7 +52,7 @@ function selectOptionOnInput(inputEl) {
             console.log("Achou")
 
             inputEl.value = option;
-                // changeTextFieldStyle("fontFamily", option)
+               
 
         }
     })
