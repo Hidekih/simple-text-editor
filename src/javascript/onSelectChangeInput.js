@@ -15,6 +15,8 @@ function changeFont(property, value, resetStyle) {
             spanEl.style.fontStyle = spanAround.style.fontStyle;
             spanEl.style.textDecoration = spanAround.style.textDecoration;
             spanEl.style.fontSize = spanAround.style.fontSize;
+            spanEl.style.fontFamily = spanAround.style.fontFamily;
+            spanEl.style.color = spanAround.style.color;
         }
         
         spanAround && spanAround.style[property] === parsedValue 
@@ -24,7 +26,7 @@ function changeFont(property, value, resetStyle) {
         spanEl.innerHTML = selection.toString();
 
         const range = selection.getRangeAt(0);
-        
+
         range.deleteContents();
         range.insertNode(spanEl)
     }

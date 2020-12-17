@@ -4,8 +4,12 @@ const FONT_FAMILY_DEFAULT = "Roboto"
 const fontFamilies = [
     "Arial",
     "Calibri",
+    "Comic Sans MS",
+    "Consolas",
     "Courier New",
+    "Symbol",
     "Roboto",
+    "Verdana",
     "Times New Roman"
 ].sort();
 
