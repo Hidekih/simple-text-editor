@@ -1,4 +1,4 @@
-const FONT_SIZE_DEFAULT = 12;
+const FONT_SIZE_DEFAULT = 11;
 const FONT_FAMILY_DEFAULT = "Roboto"
 
 const fontFamilies = [

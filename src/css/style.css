@@ -4,19 +4,17 @@
     box-sizing: border-box;
 }
 
-input, select, button {
-    outline: none;
-}
+input, select, button { outline: none; }
 
 button { cursor: pointer; }
 
 header {
-    background: #405;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    padding: 14px;
+    padding: 16px;
+    align-items: center;
+    background: #405;
 }
 
 #header-top, #header-bottom {
@@ -26,15 +24,6 @@ header {
 
 #header-top div{
     display: flex;
-}
-
-#header-top input{
-    display: flex;
-}
-
-.input-select {
-    display: flex;
-    flex-direction: column;
 }
 
 .input-select input,
@@ -51,25 +40,15 @@ header {
     padding: 0 6px;
 }
 
-#font-family input {
-    width: 121px;
-}
+#font-family input { width: 121px; }
 
-#font-family select {
-    width: 140px;
-}
+#font-family select { width: 140px; }
 
-#font-size input {
-    width: 61px;
-}
+#font-size input { width: 61px; }
 
-#font-size select {
-    width: 80px;
-}
+#font-size select { width: 80px; }
 
-#header-bottom {
-    margin-left: 6px;
-}
+#header-bottom { margin-left: 6px; }
 
 hr {
     width: 1px;
@@ -79,44 +58,28 @@ hr {
     border-width: 0 1px 0 0;
 }
 
-#change-to-bold,
-#change-to-italic,
-#change-to-underline,
-#change-color {
+.changeStyleButton {
     width: 24px;
     height: 24px;
-    font-family: Verdana, 'Times New Roman', sans-serif;
+    font-family: 'Times New Roman';
     border-radius: 2px;
     background: transparent;
     border: none;
     color:#f9f9f9;
-    font-size: 16px;
+    font-size: 18px;
     
-    transition: 0.4s;
+    transition: color 0.4s;
 }
 
-#change-to-bold:hover,
-#change-to-italic:hover,
-#change-to-underline:hover,
-#change-color:hover {
-    color: #f9f9f9ab;
-}
+.changeStyleButton:hover { color: #f9f9f9ab; }
 
-#change-to-bold {
-    font-weight: bold;
-}
+#change-to-bold { font-weight: bold; }
 
-#change-to-italic {
-    font-style: italic;
-}
+#change-to-italic { font-style: italic; }
 
-#change-to-underline {
-    text-decoration: underline;
-}
+#change-to-underline { text-decoration: underline; }
 
-#change-color {
-    cursor: pointer;
-}
+#change-color { cursor: pointer; }
 
 main {
     display: flex;
@@ -151,47 +114,30 @@ footer p {
 }
 
 @media (max-width: 720px) {
-    header {
-        flex-direction: column;
-    }
+    header { flex-direction: column; }
 
     .input-select input,
-    .input-select select {
-        height: 32px;
-    }
+    .input-select select { height: 32px; }
 
-    #font-family input {
-        width: 141px;
-    }
+    #font-family input { width: 141px; }
 
-    #font-family select {
-        width: 170px;
-    }
+    #font-family select { width: 170px; }
 
-    #font-size input {
-        width: 61px;
-    }
+    #font-size input { width: 61px; }
 
-    #font-size select {
-        width: 90px;
-    }
+    #font-size select { width: 90px; }
 
-    #header-bottom{
+    #header-bottom {
         margin-top: 22px;
         margin-left: 0;
     }
 
-    hr {
-        margin: 0 22px;
-    }
+    hr { margin: 0 22px; }
 
-    #change-to-bold,
-    #change-to-italic,
-    #change-to-underline,
-    #change-color {
+    .changeStyleButton {
         width: 28px;
         height: 28px;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     #text-field {

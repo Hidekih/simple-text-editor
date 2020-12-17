@@ -16,7 +16,7 @@
             <!-- top -->
             <div id="header-top">
                 <div id="font-family" class="input-select">
-                    <select onchange="onSelectChangeInput(this); changeFont('fontFamily', this.value, 'Arial')">
+                    <select onchange="onSelectChangeInput(this);return changeFont('fontFamily', this.value, 'Arial')">
                         <!-- automatic filling with js -->
                     </select>
                     <input type="text" onkeyup="selectOptionOnInput(this)">
@@ -33,19 +33,24 @@
 
             <!-- bottom -->
             <div id="header-bottom">
-                <button id="change-to-bold" onclick="return changeFont('fontWeight', 'bold', 'normal');" >N</button>
+                <button id="change-to-bold" class="changeStyleButton" onclick="return changeFont('fontWeight', 'bold', 'normal');" >N</button>
                 <hr>
-                <button id="change-to-italic" onclick="return changeFont('fontStyle', 'italic', 'normal');" >I</button>
+                <button id="change-to-italic" class="changeStyleButton" onclick="return changeFont('fontStyle', 'italic', 'normal');" >I</button>
                 <hr>
-                <button id="change-to-underline" onclick="return changeFont('textDecoration', 'underline', 'none');" >S</button>
+                <button id="change-to-underline" class="changeStyleButton" onclick="return changeFont('textDecoration', 'underline', 'none');" >S</button>
                 <hr>
-                <input id="change-color" type="color" onchange="return changeFont('color', this.value, 'black')">
+                <button id="change-to-uppercase" class="changeStyleButton" onclick="return changeFont('text-transform', 'uppercase', 'none');" >A</button>
+                <hr>
+                <button id="change-to-lowercase" class="changeStyleButton" onclick="return changeFont('text-transform', 'lowercase', 'none');" >a</button>
+                <hr>
+                <input id="change-color" type="color" class="changeStyleButton" onchange="return changeFont('color', this.value, 'black')">
             </div>
 
         </header>
 
         <main>
-            <div id="text-field" contenteditable="true"></div>
+            <div id="text-field" contenteditable="true" >
+            </div>
         </main>
 
         <footer>

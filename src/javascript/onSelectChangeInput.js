@@ -9,6 +9,7 @@ function changeFont(property, value, resetStyle) {
         const spanEl = document.createElement('span');
         
         const spanAround = selection.focusNode.firstElementChild;
+        
         if(spanAround){
             spanEl.style.fontWeight = spanAround.style.fontWeight;
             spanEl.style.fontStyle = spanAround.style.fontStyle;
@@ -23,17 +24,16 @@ function changeFont(property, value, resetStyle) {
         spanEl.innerHTML = selection.toString();
 
         const range = selection.getRangeAt(0);
-        console.log(spanEl.style.fontSize);
+        
         range.deleteContents();
         range.insertNode(spanEl)
     }
 }
 
-
 function generateOptionsArray(selectOptionsData, arrayLength) {
     const array = [];
     for(let i = 0; i < arrayLength; i++) 
-        array.push(selectOptionsData[i].value)
+        array.push(selectOptionsData[i].value);
     
     return array;
 }
@@ -41,7 +41,7 @@ function generateOptionsArray(selectOptionsData, arrayLength) {
 function selectOptionOnInput(inputEl) {
     const parsedInputValue = String(inputEl.value).toLowerCase();
     const selectEl = inputEl.previousSibling.previousSibling;
-    const selectOptions  = selectEl.options;
+    const selectOptions = selectEl.options;
     const aselectOptionsLength = selectOptions.length;
     const optionsArray = generateOptionsArray(selectOptions, aselectOptionsLength);
     
@@ -49,11 +49,7 @@ function selectOptionOnInput(inputEl) {
         const parsedFontValue = String(option).toLowerCase();
 
         if(parsedInputValue === parsedFontValue) {
-            console.log("Achou")
-
             inputEl.value = option;
-               
-
         }
     })
 }
